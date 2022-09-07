@@ -1,0 +1,486 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Scripts/player_car.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/cars/car_3.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Icons/21.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Icons/45.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Icons/61.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Icons/22.png" type="Texture" id=6]
+[ext_resource path="res://fonts/Odin Rounded - Regular.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sprites/Icons/64.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Icons/48.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/cars/car_15.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Icons/lock.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Icons/23.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Firework.png" type="Texture" id=13]
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("LeftSide_car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -120, 255 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LeftSide_car:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.25, 0.196 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("RightSide_car:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 600, 255 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("RightSide_car:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.25, 0.19 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "left_car_to_screen"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("LeftSide_car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -120, 255 ), Vector2( 240, 255 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LeftSide_car:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "right_car_to_screen"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("RightSide_car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 600, 255 ), Vector2( 240, 255 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RightSide_car:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Screen_car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 240, 255 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Screen_car:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.35, 0.275 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "screen_car_to_left"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Screen_car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 240, 255 ), Vector2( -120, 255 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Screen_car:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "screen_car_to_right"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Screen_car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 240, 255 ), Vector2( 600, 255 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Screen_car:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="DynamicFont" id=8]
+size = 60
+outline_size = 4
+outline_color = Color( 0.027451, 0.027451, 0.027451, 1 )
+extra_spacing_char = 10
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("firework:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "firework"
+length = 0.85
+tracks/0/type = "value"
+tracks/0/path = NodePath("firework:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 3, 6, 9, 12, 15, 18, 21, 24 ]
+}
+
+[sub_resource type="DynamicFont" id=9]
+size = 15
+outline_size = 4
+outline_color = Color( 0.196078, 0.117647, 0.117647, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("unlock_status:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 15 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("unlock_status:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "not_enough_money"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("unlock_status:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 3,
+"values": [ 15, 30 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("unlock_status:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.27451 ) ]
+}
+
+[node name="player_car" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Screen_car" type="Sprite" parent="."]
+position = Vector2( 240, 255 )
+scale = Vector2( 0.35, 0.275 )
+texture = ExtResource( 10 )
+
+[node name="lock" type="Sprite" parent="Screen_car"]
+visible = false
+modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 0, 9.99997 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="LeftSide_car" type="Sprite" parent="."]
+position = Vector2( -120, 255 )
+scale = Vector2( 0.25, 0.196 )
+
+[node name="lock" type="Sprite" parent="LeftSide_car"]
+visible = false
+modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 0, 10 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 11 )
+
+[node name="RightSide_car" type="Sprite" parent="."]
+position = Vector2( 600, 255 )
+scale = Vector2( 0.25, 0.19 )
+texture = ExtResource( 2 )
+
+[node name="lock" type="Sprite" parent="RightSide_car"]
+visible = false
+modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 0, 10 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 11 )
+
+[node name="Side_car_animator" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 4 )
+anims/left_car_to_screen = SubResource( 5 )
+anims/right_car_to_screen = SubResource( 6 )
+
+[node name="Screen_car_animator" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/screen_car_to_left = SubResource( 1 )
+anims/screen_car_to_right = SubResource( 3 )
+
+[node name="move_car_right" type="Sprite" parent="."]
+position = Vector2( 410, 243 )
+scale = Vector2( 0.352459, 0.310526 )
+texture = ExtResource( 4 )
+
+[node name="move_car_right_btn" type="Button" parent="move_car_right"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -91.0
+margin_top = -93.0
+margin_right = 91.0
+margin_bottom = 97.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="right_side_end" type="Sprite" parent="move_car_right"]
+visible = false
+texture = ExtResource( 9 )
+
+[node name="move_car_left" type="Sprite" parent="."]
+position = Vector2( 70, 243 )
+scale = Vector2( 0.352459, 0.310526 )
+texture = ExtResource( 5 )
+
+[node name="move_car_left_btn" type="Button" parent="move_car_left"]
+modulate = Color( 1, 1, 1, 0.0352941 )
+margin_left = -94.0
+margin_top = -97.0
+margin_right = 88.0
+margin_bottom = 93.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left_side_end" type="Sprite" parent="move_car_left"]
+visible = false
+texture = ExtResource( 8 )
+
+[node name="select_car" type="Sprite" parent="."]
+position = Vector2( 240, 482.703 )
+scale = Vector2( 0.392, 0.341 )
+texture = ExtResource( 3 )
+
+[node name="selected_sprite" type="Sprite" parent="select_car"]
+visible = false
+texture = ExtResource( 6 )
+
+[node name="locked_sprite" type="Sprite" parent="select_car"]
+visible = false
+texture = ExtResource( 12 )
+
+[node name="car_price" type="Label" parent="select_car/locked_sprite"]
+margin_left = -117.347
+margin_top = -178.886
+margin_right = 102.653
+margin_bottom = -98.8856
+rect_pivot_offset = Vector2( 110, 40 )
+custom_fonts/font = SubResource( 8 )
+text = "$ 1000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="select_car_lable" type="Label" parent="select_car"]
+margin_left = -214.854
+margin_top = -42.4404
+margin_right = 210.146
+margin_bottom = 33.5596
+custom_fonts/font = SubResource( 7 )
+text = "S E L E C T   C A R"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="select_car_btn" type="Button" parent="select_car"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -212.0
+margin_top = -93.0
+margin_right = 209.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="firework_animator" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 12 )
+anims/firework = SubResource( 13 )
+
+[node name="firework" type="Sprite" parent="."]
+visible = false
+position = Vector2( 239, 261 )
+texture = ExtResource( 13 )
+hframes = 6
+vframes = 5
+frame = 1
+
+[node name="unlock_status" type="Label" parent="."]
+visible = false
+margin_left = 100.0
+margin_top = 230.0
+margin_right = 383.0
+margin_bottom = 261.0
+custom_colors/font_color = Color( 0.890196, 0.156863, 0.156863, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Not Enough Money"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="unlock_status_animator" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 10 )
+anims/not_enough_money = SubResource( 11 )
+
+[connection signal="animation_finished" from="Side_car_animator" to="." method="_on_Side_car_animator_animation_finished"]
+[connection signal="animation_finished" from="Screen_car_animator" to="." method="_on_Screen_car_animator_animation_finished"]
+[connection signal="button_up" from="move_car_right/move_car_right_btn" to="." method="_on_move_car_right_btn_button_up"]
+[connection signal="button_up" from="move_car_left/move_car_left_btn" to="." method="_on_move_car_left_btn_button_up"]
+[connection signal="button_up" from="select_car/select_car_btn" to="." method="_on_select_car_btn_button_up"]
+[connection signal="animation_finished" from="firework_animator" to="." method="_on_firework_animator_animation_finished"]
+[connection signal="animation_finished" from="unlock_status_animator" to="." method="_on_unlock_status_animator_animation_finished"]

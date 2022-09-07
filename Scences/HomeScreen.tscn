@@ -1,0 +1,280 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scripts/HomeScreen.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Icons/43_1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Icons/134.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Icons/117.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Icons/126.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Icons/129.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Icons/sound2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Icons/music_off.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Icons/20.png" type="Texture" id=9]
+[ext_resource path="res://fonts/Odin Rounded - Regular.otf" type="DynamicFontData" id=10]
+[ext_resource path="res://Sprites/Icons/21.png" type="Texture" id=11]
+[ext_resource path="res://Scences/player_car.tscn" type="PackedScene" id=15]
+
+[sub_resource type="DynamicFont" id=7]
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 5
+font_data = ExtResource( 10 )
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=3]
+size = 55
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 4
+outline_color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+outline_size = 4
+outline_color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+outline_size = 4
+outline_color = Color( 0.027451, 0.027451, 0.027451, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+outline_size = 4
+outline_color = Color( 0.0313726, 0.027451, 0.027451, 1 )
+font_data = ExtResource( 10 )
+
+[node name="HomeScreen" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="total_coins" type="Sprite" parent="."]
+position = Vector2( 380, 37 )
+scale = Vector2( 1.28358, 1 )
+texture = ExtResource( 2 )
+
+[node name="total_coins_lbl" type="Label" parent="total_coins"]
+margin_left = -32.0
+margin_top = -15.0
+margin_right = 53.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0.737255, 0.823529, 0.870588, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player_car" parent="." instance=ExtResource( 15 )]
+position = Vector2( 0, -50 )
+
+[node name="level" type="Sprite" parent="."]
+position = Vector2( 240, 514.625 )
+scale = Vector2( 0.391979, 0.34079 )
+texture = ExtResource( 9 )
+
+[node name="level_btn" type="Button" parent="level"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -212.0
+margin_top = -91.0
+margin_right = 212.0
+margin_bottom = 92.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level_btn_lable" type="Label" parent="level"]
+anchor_right = 1.0
+margin_left = -277.0
+margin_top = -75.2341
+margin_right = -167.0
+margin_bottom = 78.7659
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "L E V E L"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="play" type="Sprite" parent="."]
+position = Vector2( 240, 609 )
+scale = Vector2( 0.5, 0.4 )
+texture = ExtResource( 11 )
+
+[node name="playBtnLable" type="Label" parent="play"]
+anchor_right = 1.0
+margin_left = -125.516
+margin_top = -68.6936
+margin_right = -310.516
+margin_bottom = 65.3064
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "P L A Y"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="play"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -212.0
+margin_top = -96.0
+margin_right = 209.0
+margin_bottom = 85.0
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicOff" type="Sprite" parent="."]
+position = Vector2( 75, 699 )
+scale = Vector2( 0.352459, 0.310526 )
+texture = ExtResource( 8 )
+
+[node name="music_btn" type="Button" parent="MusicOff"]
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+margin_left = -88.0
+margin_top = -90.0
+margin_right = 91.0
+margin_bottom = 197.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music_Label" type="Label" parent="MusicOff"]
+anchor_right = 1.0
+margin_left = -100.0
+margin_top = 130.0
+margin_right = -83.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 100, 25 )
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "M U S I C"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music_on" type="Sprite" parent="MusicOff"]
+texture = ExtResource( 4 )
+
+[node name="sound_off" type="Sprite" parent="."]
+position = Vector2( 185, 699 )
+scale = Vector2( 0.352459, 0.310526 )
+texture = ExtResource( 7 )
+
+[node name="sound_btn" type="Button" parent="sound_off"]
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+margin_left = -91.0
+margin_top = -90.0
+margin_right = 85.0
+margin_bottom = 184.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound_Label" type="Label" parent="sound_off"]
+anchor_right = 1.0
+margin_left = -100.0
+margin_top = 130.0
+margin_right = -83.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 100, 50 )
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
+text = "S O U N D"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound_on" type="Sprite" parent="sound_off"]
+texture = ExtResource( 3 )
+
+[node name="shop" type="Sprite" parent="."]
+position = Vector2( 295, 699 )
+scale = Vector2( 0.352459, 0.310526 )
+texture = ExtResource( 6 )
+
+[node name="shop_btn" type="Button" parent="shop"]
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+margin_left = -91.0
+margin_top = -90.0
+margin_right = 91.0
+margin_bottom = 206.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shop_Label" type="Label" parent="shop"]
+anchor_right = 1.0
+margin_left = -100.0
+margin_top = 130.0
+margin_right = -82.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 100, 25 )
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
+text = "S H O P"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="highScore" type="Sprite" parent="."]
+position = Vector2( 405, 699 )
+scale = Vector2( 0.352459, 0.310526 )
+texture = ExtResource( 5 )
+
+[node name="highscore_btn" type="Button" parent="highScore"]
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+margin_left = -91.0
+margin_top = -90.0
+margin_right = 88.0
+margin_bottom = 190.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScore_Label" type="Label" parent="highScore"]
+anchor_right = 1.0
+margin_left = -145.395
+margin_top = 130.0
+margin_right = -37.3953
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 145, 25 )
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
+text = "H I G H S C O R E"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="level/level_btn" to="." method="_on_level_btn_button_up"]
+[connection signal="button_up" from="play/Play" to="." method="_on_Play_button_up"]
+[connection signal="button_up" from="MusicOff/music_btn" to="." method="_on_music_btn_button_up"]
+[connection signal="button_up" from="sound_off/sound_btn" to="." method="_on_sound_btn_button_up"]
+[connection signal="button_up" from="shop/shop_btn" to="." method="_on_shop_btn_button_up"]
+[connection signal="button_up" from="highScore/highscore_btn" to="." method="_on_highscore_btn_button_up"]

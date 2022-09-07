@@ -1,0 +1,30 @@
+func SaveCars():
+	#sample car data: car[0] = name, car[1] = on_screen_x_scale, car[2] = on_screen_y_scale
+	#car[3] = on_sside_x_scale, car[5] = on_side_y_scale, car[6] = locked_status/buy_status, car[7] = price  
+	var car_1  = ["1" , true, 0]
+	var car_2  = ["2" , true, 0]
+	var car_3  = ["3" , true, 0]
+	var car_4  = ["4" , true, 0]
+	var car_5  = ["5" , false, 50]
+	var car_6  = ["6" , false, 100]
+	var car_7  = ["7" , false, 100]
+	var car_8  = ["8" , false, 100]
+	var car_9  = ["9" , false, 200]
+	var car_10 = ["10" , false, 200]
+	var car_11 = ["11" , false, 200]
+	var car_12 = ["12" , false, 200]
+	var car_13 = ["13" , false, 200]
+	var car_14 = ["14" , false, 350]
+	var car_15 = ["15" , false, 350]
+	var car_16 = ["16" , false, 500]
+	var car_17 = ["17" , false, 500]
+	var car_18 = ["18" , false, 500]
+	var car_19 = ["19" , false, 1000]
+	var car_20 = ["20" , false, 1000]
+	var car_21 = ["21" , false, 1000]
+	# car_data[0] = no. of cars and all other are car data as explained above
+	var car_data = [21, car_1, car_2, car_3, car_4, car_5, car_6, car_7, car_8, car_9, car_10, car_11, car_12, car_13, car_14, car_15, car_16, car_17, car_18, car_19, car_20, car_21]
+	var save_data = File.new()
+	save_data.open(res_cars_data_path, File.WRITE)
+	save_data.store_var(car_data)
+	save_data.close()

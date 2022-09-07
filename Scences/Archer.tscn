@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/SideRoadThings/13.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/SideRoadThings/12.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Archer.gd" type="Script" id=4]
+
+[node name="Archer" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="12" type="Sprite" parent="."]
+position = Vector2( 60, -78.25 )
+scale = Vector2( 1.57895, 1.51136 )
+texture = ExtResource( 3 )
+
+[node name="13" type="Sprite" parent="12"]
+position = Vector2( -20, -5 )
+texture = ExtResource( 2 )

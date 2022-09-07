@@ -1,0 +1,216 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/Icons/174.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Levels.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Icons/21.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Icons/22.png" type="Texture" id=4]
+[ext_resource path="res://fonts/Odin Rounded - Regular.otf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 52
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 23
+font_data = ExtResource( 5 )
+
+[node name="Levels" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Back_Btn_icon" type="Sprite" parent="."]
+position = Vector2( 57.7925, 36.5888 )
+scale = Vector2( 0.320961, 0.21373 )
+texture = ExtResource( 1 )
+
+[node name="back_Btn" type="Button" parent="Back_Btn_icon"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -89.2369
+margin_top = -96.7273
+margin_right = 88.7631
+margin_bottom = 100.273
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Very_Easy" type="Sprite" parent="."]
+position = Vector2( 240, 235 )
+scale = Vector2( 0.39, 0.34 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Very_Easy"]
+margin_left = -220.0
+margin_top = -70.0
+margin_right = 230.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 225, 62 )
+custom_fonts/font = SubResource( 2 )
+text = "V e r y   E a s y"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="very_easy_btn" type="Button" parent="Very_Easy"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -210.0
+margin_top = -90.0
+margin_right = 208.0
+margin_bottom = 95.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Easy_btn_icon" type="Sprite" parent="."]
+position = Vector2( 240, 335 )
+scale = Vector2( 0.39, 0.34 )
+texture = ExtResource( 3 )
+
+[node name="Label2" type="Label" parent="Easy_btn_icon"]
+margin_left = -220.0
+margin_top = -70.0
+margin_right = 230.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 225, 62 )
+custom_fonts/font = SubResource( 2 )
+text = "E a s y"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="easy_btn" type="Button" parent="Easy_btn_icon"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -207.692
+margin_top = -88.2352
+margin_right = 209.308
+margin_bottom = 79.7648
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Normal" type="Sprite" parent="."]
+position = Vector2( 240, 435 )
+scale = Vector2( 0.39, 0.34 )
+texture = ExtResource( 3 )
+
+[node name="Label3" type="Label" parent="Normal"]
+margin_left = -220.0
+margin_top = -70.0
+margin_right = 230.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 225, 62 )
+custom_fonts/font = SubResource( 2 )
+text = "N o r m a l"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="normal_btn" type="Button" parent="Normal"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -210.0
+margin_top = -100.0
+margin_right = 213.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hard" type="Sprite" parent="."]
+position = Vector2( 240, 535 )
+scale = Vector2( 0.39, 0.34 )
+texture = ExtResource( 3 )
+
+[node name="Label4" type="Label" parent="Hard"]
+margin_left = -220.0
+margin_top = -70.0
+margin_right = 230.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 225, 62 )
+custom_fonts/font = SubResource( 2 )
+text = "H a r d"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hard_btn" type="Button" parent="Hard"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -221.0
+margin_top = -91.0588
+margin_right = 213.0
+margin_bottom = 93.9412
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Very_Hard" type="Sprite" parent="."]
+position = Vector2( 240, 635 )
+scale = Vector2( 0.39, 0.34 )
+texture = ExtResource( 3 )
+
+[node name="Label5" type="Label" parent="Very_Hard"]
+margin_left = -220.0
+margin_top = -70.0
+margin_right = 230.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 225, 62 )
+custom_fonts/font = SubResource( 2 )
+text = "V e r y   H a r d"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="very_hard_btn" type="Button" parent="Very_Hard"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -213.0
+margin_top = -97.0
+margin_right = 213.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="selected_sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 240, 235 )
+scale = Vector2( 0.39, 0.34 )
+texture = ExtResource( 4 )
+
+[node name="Label6" type="Label" parent="selected_sprite"]
+margin_left = -220.0
+margin_top = -70.0
+margin_right = 230.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 225, 62 )
+custom_fonts/font = SubResource( 2 )
+text = "E a s y"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="Back_Btn_icon/back_Btn" to="." method="_on_back_Btn_button_up"]
+[connection signal="button_up" from="Very_Easy/very_easy_btn" to="." method="_on_very_easy_btn_button_up"]
+[connection signal="button_up" from="Easy_btn_icon/easy_btn" to="." method="_on_easy_btn_button_up"]
+[connection signal="button_up" from="Normal/normal_btn" to="." method="_on_normal_btn_button_up"]
+[connection signal="button_up" from="Hard/hard_btn" to="." method="_on_hard_btn_button_up"]
+[connection signal="button_up" from="Very_Hard/very_hard_btn" to="." method="_on_very_hard_btn_button_up"]
